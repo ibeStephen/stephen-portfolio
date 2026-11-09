@@ -3,247 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#111313" />
-  <meta
-    name="description"
-    content="Stephen Kimanzi is a software developer based in Nairobi, Kenya."
-  />
+  <meta name="theme-color" content="#0a0c18" />
+  <meta name="description" content="Stephen Kimanzi is a software developer in Kenya building React Native apps and the backends behind them." />
   <title>Stephen Kimanzi — Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="lg" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .016" numOctaves="2" seed="4" result="n" />
+      <feGaussianBlur in="n" stdDeviation="3" result="b" />
+      <feDisplacementMap in="SourceGraphic" in2="b" scale="38" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Stephen Kimanzi, home">
-      SK<span>.</span>
-    </a>
-
-    <button
-      class="menu-toggle glass-control"
-      type="button"
-      aria-label="Open navigation"
-      aria-expanded="false"
-      aria-controls="site-nav"
-    >
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="site-nav glass-panel" id="site-nav" aria-label="Main navigation">
+    <a class="wordmark" href="#home" aria-label="Stephen Kimanzi, home">SK<span>.</span></a>
+    <nav class="site-nav glass" aria-label="Main navigation">
+      <span class="nav-pill" aria-hidden="true"></span>
+      <a href="#home" class="active">Home</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
-
-    <a class="header-link glass-control" href="mailto:stephenkimanzi6520@gmail.com">
-      Get in touch <span aria-hidden="true">↗</span>
-    </a>
+    <a class="header-cta glass magnetic" href="mailto:stephenkimanzi6520@gmail.com">Say hello</a>
   </header>
 
   <main>
-    <section class="hero page-width" id="home">
+    <section class="hero page" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> Based in Nairobi, Kenya</p>
-        <h1>Hi, I’m Stephen.<br />I build for the <span>web.</span></h1>
-        <p class="hero-description">
-          Software developer interested in useful websites, thoughtful interfaces,
-          and learning by making things.
+        <p class="status"><span class="dot"></span> Taking on new projects</p>
+        <h1>I build mobile apps and the backends behind them.</h1>
+        <p class="lede">
+          Stephen Kimanzi, a React Native developer in Kenya. I design, build and ship
+          full-stack products, from the interface down to the database.
         </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary glass-control" href="#work">
-            See what I’m working on <span aria-hidden="true">↓</span>
-          </a>
-          <a class="text-link" href="https://github.com/ibeStephen" target="_blank" rel="noreferrer">
-            GitHub profile <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <div class="hero-location">
-          <span class="location-mark" aria-hidden="true">↳</span>
-          <span>Nairobi, Kenya<br /><small>East Africa Time · EAT</small></span>
+        <div class="actions">
+          <a class="btn primary glass magnetic" href="#work">See my work</a>
+          <a class="btn glass magnetic" href="https://github.com/ibeStephen" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
 
-      <aside class="profile-card glass-panel" aria-label="GitHub profile">
-        <div class="profile-card-top">
-          <span class="card-label">A little about me</span>
-          <span class="card-star" aria-hidden="true">✳</span>
-        </div>
-        <img
-          class="avatar"
-          src="https://avatars.githubusercontent.com/u/236579749?v=4"
-          alt="Stephen Kimanzi’s GitHub profile avatar"
-          width="88"
-          height="88"
-        />
-        <p class="profile-name">Stephen Kimanzi</p>
-        <p class="profile-handle">@ibeStephen</p>
-        <p class="profile-note">
-          Building, exploring, and sharing projects from Nairobi.
-        </p>
-        <a
-          class="profile-button glass-control"
-          href="https://github.com/ibeStephen"
-          target="_blank"
-          rel="noreferrer"
-        >
-          View GitHub <span aria-hidden="true">↗</span>
-        </a>
-        <span class="card-coordinate">01°17′S · 36°49′E</span>
-      </aside>
-
-      <a class="scroll-hint" href="#work"><span></span> Scroll to explore</a>
-    </section>
-
-    <section class="work-section page-width" id="work">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">A few things I’m exploring</p>
-          <h2>Projects &amp; code<span class="heading-period">.</span></h2>
-        </div>
-        <a class="text-link all-projects" href="https://github.com/ibeStephen?tab=repositories" target="_blank" rel="noreferrer">
-          All repositories <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-
-      <div class="project-list">
-        <article class="project-card">
-          <div class="project-number">01</div>
-          <div class="project-main">
-            <div class="project-topline">
-              <span class="project-tag">UI library · React</span>
-              <span class="project-status">Fork / exploration</span>
-            </div>
-            <h3>Lightswind UI Library</h3>
-            <p>
-              Exploring a React component library with animated and accessible
-              interface components. This is a fork of the Lightswind project.
-            </p>
-            <a class="project-link" href="https://github.com/ibeStephen/lightswind-ui-library" target="_blank" rel="noreferrer">
-              View repository <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <a class="project-arrow glass-control" href="https://github.com/ibeStephen/lightswind-ui-library" target="_blank" rel="noreferrer" aria-label="Open Lightswind UI Library on GitHub">↗</a>
+      <div class="stage" aria-label="About Stephen">
+        <article class="fcard glass profile" data-tilt style="--d:14;--delay:.15s;--r:-3deg">
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/236579749?v=4" alt="Stephen Kimanzi" width="76" height="76" />
+          <h2>Stephen Kimanzi</h2>
+          <p>@ibeStephen</p>
         </article>
-
-        <article class="project-card">
-          <div class="project-number">02</div>
-          <div class="project-main">
-            <div class="project-topline">
-              <span class="project-tag">Website · HTML</span>
-              <span class="project-status">Personal repository</span>
-            </div>
-            <h3>My Business</h3>
-            <p>
-              A small HTML project in my public repositories. I’m continuing
-              to build and improve my web development work.
-            </p>
-            <a class="project-link" href="https://github.com/ibeStephen/my-business" target="_blank" rel="noreferrer">
-              View repository <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <a class="project-arrow glass-control" href="https://github.com/ibeStephen/my-business" target="_blank" rel="noreferrer" aria-label="Open My Business on GitHub">↗</a>
+        <article class="fcard glass now" data-tilt style="--d:28;--delay:.35s;--r:2.5deg">
+          <span class="label">Right now</span>
+          <p>Industrial intern at Cly Technologies</p>
+          <p class="sub">Also freelancing in React Native for a US-based client</p>
         </article>
-
-        <article class="project-card">
-          <div class="project-number">03</div>
-          <div class="project-main">
-            <div class="project-topline">
-              <span class="project-tag">Profile · GitHub</span>
-              <span class="project-status">Personal repository</span>
-            </div>
-            <h3>My GitHub profile</h3>
-            <p>
-              My profile repository—the place to learn more about what I’m
-              working on and find my latest public code.
-            </p>
-            <a class="project-link" href="https://github.com/ibeStephen/ibeStephen" target="_blank" rel="noreferrer">
-              View repository <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <a class="project-arrow glass-control" href="https://github.com/ibeStephen/ibeStephen" target="_blank" rel="noreferrer" aria-label="Open profile repository on GitHub">↗</a>
+        <article class="fcard glass stack" data-tilt style="--d:40;--delay:.55s;--r:-2deg">
+          <span class="label">Works with</span>
+          <div class="chips"><b>React Native</b><b>TypeScript</b><b>Node.js</b><b>Supabase</b><b>PHP</b><b>MySQL</b><b>PostgreSQL</b></div>
+        </article>
+        <article class="fcard glass ping" data-tilt style="--d:55;--delay:.75s;--r:4deg">
+          <span class="dot"></span> Based in Kenya · EAT
         </article>
       </div>
     </section>
 
-    <section class="education-section page-width" id="education">
-      <div class="section-heading education-heading">
-        <div>
-          <p class="section-kicker">Education</p>
-          <h2>Bachelor’s degree in Computer Science<span class="heading-period">.</span></h2>
-        </div>
+    <section class="work page" id="work">
+      <div class="heading">
+        <h2>Selected work</h2>
+        <p>Open any project for the details.</p>
       </div>
 
-      <div class="education-card glass-panel">
-        <div class="education-mark">CS</div>
-        <div class="education-copy">
-          <p class="education-label">Academic background</p>
-          <h3>Bachelor of Science in Computer Science</h3>
-          <p>
-            A strong foundation in software fundamentals, problem solving,
-            programming, systems thinking, and digital product creation.
-          </p>
+      <div class="grid">
+        <article class="pcard glass reveal wide" data-tilt tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="tag">Full-stack · AI · Flagship</span>
+          <h3>MindLink</h3>
+          <p>An AI-powered mental wellness companion I founded and built solo. Its assistant, Mia, replies using your real mood, sleep and journal data.</p>
+          <div class="more">
+            <p>MindLink is a mobile wellness app built around Mia, an AI companion powered by OpenAI GPT-4o. Instead of generic advice, Mia answers using what the person has actually logged: their mood, their sleep and their journal entries.</p>
+            <ul>
+              <li><b>Ten screens:</b> Welcome, Onboarding, Login, Home, Chat, Sleep, Journal, Mood Tracker, Medication and Profile, in a consistent dark forest-green design.</li>
+              <li><b>Backend:</b> a Node.js and Express API on MongoDB Atlas, with JWT authentication and refresh-token rotation.</li>
+              <li><b>AI layer:</b> a dedicated Mia service that turns the user's data into context for GPT-4o.</li>
+              <li><b>Reminders:</b> Expo push notifications and a scheduler service for check-ins and medication reminders.</li>
+              <li><b>Quality:</b> Jest tests on the backend.</li>
+            </ul>
+            <p>Next on the roadmap: a Play Store release, hospital integration, and deeper sleep and wellness modules.</p>
+            <div class="chips"><b>React Native</b><b>Expo</b><b>Node.js</b><b>Express</b><b>MongoDB Atlas</b><b>GPT-4o</b><b>JWT</b><b>Jest</b></div>
+          </div>
+        </article>
+
+        <article class="pcard glass reveal" data-tilt tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="tag">Website · Built at Cly Technologies</span>
+          <h3>The Vault</h3>
+          <p>A website for an exclusive nightclub, with events, gallery and contact pages.</p>
+          <div class="more">
+            <p>I developed the website for The Vault during my industrial internship at Cly Technologies. It has an events page, a gallery and a contact page, with each page loading its content from a single PHP backend.</p>
+            <div class="chips"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>PHP</b><b>MySQL</b></div>
+          </div>
+        </article>
+
+        <article class="pcard glass reveal" data-tilt tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="tag">Project</span>
+          <h3>Salama</h3>
+          <p>Another product I designed and built.</p>
+          <div class="more">
+            <p>Salama is another project from my portfolio of full-stack work.</p>
+          </div>
+        </article>
+
+        <article class="pcard glass reveal" data-tilt tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="tag">IoT · Full-stack</span>
+          <h3>Smart Attendance</h3>
+          <p>RFID-based attendance that replaces paper registers.</p>
+          <div class="more">
+            <p>A full-stack attendance system that combines RFID hardware with a web application, built to remove manual roll calls and make attendance records instant and reliable.</p>
+            <div class="chips"><b>RFID</b><b>IoT</b><b>Full-stack</b></div>
+          </div>
+        </article>
+
+        <article class="pcard glass reveal" data-tilt tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="tag">Mobile · Productivity</span>
+          <h3>Routine Builder</h3>
+          <p>A habit tracker for building routines that last.</p>
+          <div class="more">
+            <p>A mobile habit tracker built with React Native, TypeScript and Expo. The build is planned in three phases, starting with a shippable MVP.</p>
+            <div class="chips"><b>React Native</b><b>TypeScript</b><b>Expo</b></div>
+          </div>
+        </article>
+
+        <article class="pcard glass reveal wide" data-tilt tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="tag">Client website</span>
+          <h3>Malkan Nutritive Herbs</h3>
+          <p>A three-page storefront for a herbal products business in Maua, Meru, with ordering built in.</p>
+          <div class="more">
+            <p>A glassmorphism bento-style website for Malkan Nutritive Herbs. Visitors open a product order modal and choose to pay with M-Pesa through the Daraja API or pay on delivery.</p>
+            <div class="chips"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>M-Pesa Daraja</b></div>
+          </div>
+        </article>
+      </div>
+      <a class="more-link" href="https://github.com/ibeStephen?tab=repositories" target="_blank" rel="noreferrer">All repositories on GitHub ↗</a>
+    </section>
+
+    <section class="about page" id="about">
+      <div class="heading"><h2>About</h2></div>
+      <div class="about-grid">
+        <div class="glass reveal about-card" data-tilt>
+          <p>I'm a software developer with a BSCS degree and a freelance React Native practice. I like owning a product end to end: the screens people tap, the API behind them, and the data model that keeps it all honest.</p>
+          <p>Right now I'm doing an industrial internship at Cly Technologies, and I keep learning on the side through Cisco and HarvardX courses.</p>
         </div>
+        <ol class="timeline glass reveal" data-tilt>
+          <li><b>Industrial intern</b><span>Cly Technologies</span></li>
+          <li><b>Freelance React Native developer</b><span>US-based client, remote</span></li>
+          <li><b>Secretary General, developer club</b><span>Community leadership</span></li>
+          <li><b>Learning: Cisco and HarvardX</b><span>Networking and computer science courses</span></li>
+          <li><b>BSCS degree</b><span>Bachelor of Science in Computer Science</span></li>
+        </ol>
       </div>
     </section>
 
-    <section class="about-section page-width" id="about">
-      <div class="about-label">
-        <p class="section-kicker">A quick introduction</p>
-        <span class="about-scribble" aria-hidden="true">Nairobi ↗</span>
-      </div>
-      <div class="about-copy">
-        <h2>Curious by nature.<br /><span>Developer by practice.</span></h2>
-        <p>
-          I’m Stephen Kimanzi, a developer based in Nairobi. I enjoy exploring
-          how websites are made, working on projects, and getting better through
-          hands-on practice.
-        </p>
-        <p>
-          This page is a snapshot of my public work. I’ll keep adding projects
-          as I build them.
-        </p>
-
-        <div class="tool-list" aria-label="Technologies">
-          <span>HTML</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>CSS</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section page-width" id="contact">
-      <div class="contact-panel glass-panel">
-        <p class="section-kicker">Have something in mind?</p>
-        <h2>Let’s talk<span class="heading-period">.</span></h2>
-        <p class="contact-copy">
-          For projects, opportunities, or a friendly hello, get in touch.
-        </p>
-        <div class="contact-actions">
-          <a class="button button-primary glass-control" href="mailto:stephenkimanzi6520@gmail.com">
-            Email me <span aria-hidden="true">↗</span>
-          </a>
-          <a class="button button-secondary glass-control" href="tel:+254799155636">
-            Call <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <div class="contact-details">
-          <a href="mailto:stephenkimanzi6520@gmail.com">stephenkimanzi6520@gmail.com</a>
-          <a href="tel:+254799155636">+254 799 155 636</a>
+    <section class="contact page" id="contact">
+      <div class="contact-panel glass reveal" data-tilt>
+        <h2>Have a project in mind?</h2>
+        <p>Tell me what you're building and where you're stuck. I reply within a day or two.</p>
+        <div class="actions">
+          <a class="btn primary glass magnetic" href="mailto:stephenkimanzi6520@gmail.com">Email me</a>
+          <button class="btn glass magnetic copy" type="button" data-copy="stephenkimanzi6520@gmail.com">Copy email</button>
+          <a class="btn glass magnetic" href="tel:+254799155636">Call</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer page-width">
+  <footer class="site-footer page">
     <span>© <span id="year"></span> Stephen Kimanzi</span>
     <a href="https://github.com/ibeStephen" target="_blank" rel="noreferrer">GitHub ↗</a>
     <a href="#home">Back to top ↑</a>
   </footer>
 
-  <div class="toast glass-panel" role="status" aria-live="polite"></div>
+  <dialog class="modal glass" id="modal" aria-labelledby="m-title">
+    <button class="close" type="button" aria-label="Close">✕</button>
+    <span class="tag" id="m-tag"></span>
+    <h3 id="m-title"></h3>
+    <div id="m-body"></div>
+  </dialog>
+  <div class="toast glass" role="status" aria-live="polite"></div>
 </body>
 </html>
